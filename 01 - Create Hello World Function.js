@@ -4,12 +4,9 @@
 
 // (----------------------------- THE ANSWER -----------------------------)
 
+// Leetcode will not allow this but for educational purpose 
+const createHelloWorld = () => () => "Hello World";
 
-var createHelloWorld = function() {
-    return function(...args) {
-        return "Hello World";
-    }
-};
 
 /**
  * const f = createHelloWorld();

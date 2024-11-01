@@ -6,13 +6,19 @@
 
 var expect = function(val) {
     return {
-        toBe: (val2) => {
-            if (val !== val2) throw new Error("Not Equal");
-            else return true;
+        toBe: function(otherVal) {
+            if (val === otherVal) {
+                return true;
+            } else {
+                throw new Error("Not Equal");
+            }
         },
-        notToBe: (val2) => {
-            if (val === val2) throw new Error("Equal");
-            else return true;
+        notToBe: function(otherVal) {
+            if (val !== otherVal) {
+                return true;
+            } else {
+                throw new Error("Equal");
+            }
         }
-    }
+    };
 };

@@ -6,11 +6,13 @@
 
 
 var createCounter = function(n) {
+    
+    let count = n;
+    
     return function() {
-        return n++;
+        return count ++
     };
 };
-
 /** 
  * const counter = createCounter(10)
  * counter() // 10
